@@ -1,0 +1,876 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>I-FEST²
+</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+	<meta name="_token" content="[redacted-transient-csrf-token]">
+
+	<!-- Favicons -->
+	<link href="https://www.ifest-tunisia.org/src/img/IFEST.png" rel="icon">
+	<link href="https://www.ifest-tunisia.org/src/img/IFEST.png" rel="apple-touch-icon">
+
+	  <!-- Google Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+	  <!-- Bootstrap CSS File -->
+	  <link href="https://www.ifest-tunisia.org/src/css/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	  <!-- Libraries CSS Files -->
+	  <link href="https://www.ifest-tunisia.org/src/css/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	  <link href="https://www.ifest-tunisia.org/src/css/lib/animate/animate.min.css" rel="stylesheet">
+	  <link href="https://www.ifest-tunisia.org/src/css/lib/venobox/venobox.css" rel="stylesheet">
+	  <link href="https://www.ifest-tunisia.org/src/css/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+	  <!-- Main Stylesheet File -->
+	  <link href="https://www.ifest-tunisia.org/src/css/style.css" rel="stylesheet">
+
+    <!-- datepick css -->
+    <link href="https://www.ifest-tunisia.org/src/css/jquery.datepick.css" rel="stylesheet">
+
+</head>
+<body>
+	<input type="hidden" name="_token" value="[redacted-transient-csrf-token]">	<header id="header">
+    <div class="container" style="padding-left: 2px;padding-right: 2px;">
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+         <h1><a href="#intro"><span>I</span>-FEST<span>²</span></a></h1>
+        <!-- <a href="#intro" class="scrollto"><img src="https://www.ifest-tunisia.org/src/img/IFEST.png" alt="" title=""></a> -->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#categories">Project Categories</a></li>
+          <li><a href="#steam">STEAM</a></li>
+          <li><a href="#robot">Robotics Competition</a></li>
+          <li><a href="#aboutatast">Organizers</a></li>
+          <li><a href="#abouttunisia">About Tunisia</a></li>
+          <li><a href="#venue">Venue</a></li>
+          <li><a href="#desert">Desert Extra Trip</a></li>
+                    <li class="buy-tickets"><a href="https://www.ifest-tunisia.org/user/login">Login</a></li>
+          <li class="buy-tickets"><div><a href="#animatedModal" class="demo01">Sign Up</a></div></li>   
+                           
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->	<main id="main">
+		<!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-container wow fadeIn">
+      <h1 class="mb-4 pb-0"><span>One Of The Biggest</span><br>International Science Fair <br>In Africa</h1>
+     <!--  <p class="mb-4 pb-0">20-26 March, Monastir, Tunisia</p>
+      <p class="mb-4 pb-0">26-29 March, Extra Trip, Tunisian South</p> -->
+      <a href="https://www.youtube.com/watch?v=Qpa_w866Rtg" class="venobox play-btn mb-4" data-vbtype="video"
+        data-autoplay="true"></a>
+        <p class="mb-4 pb-0 deadline blink">2026 Registration Is Open</p>
+        <div class="text-center" ><a href="#animatedModal" class="demo01 about-btn">Sign Up</a></div>
+        <p class="mb-4 pb-0 deadline">Affiliation Registration Now Open:</p>
+        <div class="text-center"><a href="#animatedModal2" class="demo03 about-btn">Become an Affiliate</a></div>
+        
+      
+
+      
+      
+    </div>
+  </section>
+
+   <!--==========================
+      About Section
+    ============================-->
+    <section id="aboutifest">
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>About I-FEST²</h2>
+            <p>I-FEST², the International Festival of Engineering Science and Technology in Tunisia, is a 9-day-festival organized by ATAST, the Tunisian Association for the future of Science and Technology, open for all students between the ages of 14 and 24.<br>The 9-day program will be an experience as unique, educational and fun as possible, including various activities and many new discoveries, and will include various trips and excursions to discover the rich Tunisian culture.</p>
+          </div>
+          <div class="col-lg-3">
+            <h3>Where</h3>
+            <p>TBA Luxury Hotel, Tunisia</p>
+          </div>
+          <div class="col-lg-3">
+            <h3>When</h3>
+            <p>23 - 29 March, 2026</p>
+            <p>29-31 March : Nomad Tours Extra Trip</p>
+
+            <div style="display: -webkit-box;">
+              <h3>Time To I-FEST² 2026 : </h3>
+              
+               <p id="countdown"></p>
+            </div>
+          </div>
+      </div>
+    </section>
+    </section>
+
+    <script>
+
+      CountDownTimer('03/23/2026 8:0 AM', 'countdown');
+  
+      function CountDownTimer(dt, id)
+      {
+          var end = new Date(dt);
+  
+          var _second = 1000;
+          var _minute = _second * 60;
+          var _hour = _minute * 60;
+          var _day = _hour * 24;
+          var timer;
+  
+          function showRemaining() {
+              var now = new Date();
+              var distance = end - now;
+              if (distance < 0) {
+  
+                  clearInterval(timer);
+                  document.getElementById(id).innerHTML = 'EXPIRED!';
+  
+                  return;
+              }
+              var days = Math.floor(distance / _day);
+              var hours = Math.floor((distance % _day) / _hour);
+              var minutes = Math.floor((distance % _hour) / _minute);
+              var seconds = Math.floor((distance % _minute) / _second);
+  
+              document.getElementById(id).innerHTML = days + 'days ';
+              document.getElementById(id).innerHTML += hours + 'hrs ';
+              document.getElementById(id).innerHTML += minutes + 'mins ';
+              document.getElementById(id).innerHTML += seconds + 'secs';
+          }
+  
+          timer = setInterval(showRemaining, 1000);
+      }
+  
+  </script>
+<section id="gallery" class="wow fadeInUp">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Gallery</h2>
+          <p>Check our gallery from the recent events</p>
+        </div>
+      </div>
+
+      <div class="owl-carousel gallery-carousel">
+        <a href="https://www.ifest-tunisia.org/src/img/gallery1/1.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://www.ifest-tunisia.org/src/img/gallery1/1.jpg" alt=""></a>
+        <a href="https://www.ifest-tunisia.org/src/img/gallery1/2.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://www.ifest-tunisia.org/src/img/gallery1/2.jpg" alt=""></a>
+        <a href="https://www.ifest-tunisia.org/src/img/gallery1/3.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://www.ifest-tunisia.org/src/img/gallery1/3.jpg" alt=""></a>
+        <a href="https://www.ifest-tunisia.org/src/img/gallery1/4.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://www.ifest-tunisia.org/src/img/gallery1/4.jpg" alt=""></a>
+        <a href="https://www.ifest-tunisia.org/src/img/gallery1/5.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://www.ifest-tunisia.org/src/img/gallery1/5.jpg" alt=""></a>
+        <a href="https://www.ifest-tunisia.org/src/img/gallery1/6.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://www.ifest-tunisia.org/src/img/gallery1/7.jpg" alt=""></a>
+        <a href="https://www.ifest-tunisia.org/src/img/gallery1/8.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://www.ifest-tunisia.org/src/img/gallery1/8.jpg" alt=""></a>
+        <a href="https://www.ifest-tunisia.org/src/img/gallery1/9.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://www.ifest-tunisia.org/src/img/gallery1/9.jpg" alt=""></a>
+      </div>
+
+    </section>
+<section id="categories">
+<section id="speakers" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>I-FEST² Categories</h2>
+        </div>
+
+        <div class="row" style="justify-content: center;">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="https://www.ifest-tunisia.org/src/img/categories/1.jpg" alt="Speaker 3" class="img-fluid">
+              <div class="details">
+                <h3><a href="">Physical Science</a></h3>
+              </div>
+            </div>
+             <div class ="category-description">
+              <p>Current research areas can be listed roughly as solid-state physics, atomic, molecular and optical physics, particle physics, astrophysics, geophysics and biophysics. It contains the experiments done to test the theoretical predictions, Physical Science contains the works of producing mathematical models that can be tested with experiments.</p></div>   
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="https://www.ifest-tunisia.org/src/img/categories/2.jpg" alt="Speaker 3" class="img-fluid">
+              <div class="details">
+                <h3><a href="">Environmental Science</a></h3>
+              </div>
+            </div>
+             <div class ="category-description">
+              <p>Environmental science is a multidisciplinary academic field that integrates physical, biological and information sciences to the study of the environment, and the solution of environmental problems. Environmental science provides an integrated, quantitative, and interdisciplinary approach to the study of environmental systems.</p></div>   
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="https://www.ifest-tunisia.org/src/img/categories/3.jpg" alt="Speaker 3" class="img-fluid">
+              <div class="details">
+                <h3><a href="">Social Science</a></h3>
+              </div>
+            </div>
+             <div class ="category-description">
+              <p>In sociology, identity is a person's conception and expression of their individuality or group affiliations (such as national identity and cultural identity). The concept is given a great deal of attention in social psychology and is important in place identity.</p></div>   
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="https://www.ifest-tunisia.org/src/img/categories/4.jpg" alt="Speaker 3" class="img-fluid">
+              <div class="details">
+                <h3><a href="">Computer Science</a></h3>
+              </div>
+            </div>
+             <div class ="category-description">
+              <p>Computer Science is the scientific and practical approach to computation and its applications. It is the systematic study of the feasibility, structure, expression, and mechanization of the methodical processes (or algorithms) that underlie the acquisition, representation, processing, storage, communication of, and access to information.</p></div>   
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="https://www.ifest-tunisia.org/src/img/categories/5.jpg" alt="Speaker 3" class="img-fluid">
+              <div class="details">
+                <h3><a href="">Engineering</a></h3>
+              </div>
+            </div>
+             <div class ="category-description">
+              <p>Engineering is the application of scientific, economic, social, and practical knowledge in order to design, build, maintain, and improve structures, machines, devices, systems, materials and processes. It may encompass using insights to conceive, model and scale an appropriate solution to a problem or objective. The discipline of engineering is extremely broad, and encompasses a range of more specialized fields of engineering, each with a more specific emphasis on particular areas of technology and types of application.</p></div>   
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="https://www.ifest-tunisia.org/src/img/categories/6.jpg" alt="Speaker 3" class="img-fluid">
+              <div class="details">
+                <h3><a href="">Life & Biology</a></h3>
+              </div>
+            </div>
+             <div class ="category-description">
+              <p>It concernes the basic life events in the body, diversity, growth, development, behaviors, their relationship with the environment. Every day, people encounter biological problems. it is divided into many branches such as Botanic, zoology, microbiology, physiology, morphology, ecology, biochemistry.</p></div>   
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="https://www.ifest-tunisia.org/src/img/categories/7.jpg" alt="Speaker 3" class="img-fluid">
+              <div class="details">
+                <h3><a href="">Multimedia</a></h3>
+              </div>
+            </div>
+             <div class ="category-description">
+              <p>Multimedia refers to content that uses a combination of different content forms. This contrasts with media that use only rudimentary computer displays such as text-only or traditional forms of printed or hand-produced material. Multimedia includes a combination of text, audio, still images, animation, video, or interactivity content forms. Multimedia is usually recorded and played, displayed, or accessed by information content processing devices, such as computerized and electronic devices, but can also be part of a live performance. Multimedia devices are electronic media devices used to store and experience multimedia content.</p></div>   
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="https://www.ifest-tunisia.org/src/img/categories/8.jpg" alt="Speaker 3" class="img-fluid">
+              <div class="details">
+                <h3><a href="">Mathematics</a></h3>
+              </div>
+            </div>
+             <div class ="category-description">
+              <p>"the study of quantity, structure, space and change." With a definition like that, it's easy to see why math is often called "the language of science."  projects in Math field is stating scientific theories in a way that is clear, succinct, and testable.</p></div>   
+          </div>
+
+
+
+          
+        </div>
+      </div>
+
+    </section>
+</section><section id="steam">
+<section id="speakers-details" class="wow fadeIn">
+      <div class="container">
+        <div class="section-header">
+          <h2>STEAM Congress</h2>
+          <p>Science Technology Engineering Arts Mathematics</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="details">
+              <h2>About I-FEST² STEAM Congress</h2>
+              <p>The International STEAM Congress is a forum, taking place during the International Festival of Engineering Sciences and Technology in Tunisia, targeting 150 teachers, educators, and leaders in organizations dedicated to advancing the interest of STEAM disciplines to youth.</p>
+ 
+              <p>The first part of the congress is, the STEAM Conference which is a space where important topics can be discussed and debated to develop strategies and solutions to engage young people in pursuit of STEAM education in their respective countries. 
+              Highly qualified speakers will be there to make a speech in different STEAM topics and share their expertise with the participants.</p> 
+
+              <p>Also, STEAM Workshops are making the International STEAM Congress such a unique event. For this year’s edition the STEAM workshops will have four main axes.</p>
+              <p>Finally, all educators and leaders in organizations have the opportunity to compete together and each participant has to choose a specific field and present a STEAM educational lesson during the STEAM TEACHERS CONTEST with the presence of a jury committee.
+              The Lesson’s script must be sent in advance to the organisation board via email: 
+              </p>
+              <h5><span style="color: #f82249;">steam@ifest-tunisia.org</span></h5>
+
+            </div>
+          </div>
+    
+        </div>
+        
+      </div>
+
+    </section>
+    </section><section id="robot">
+<section id="speakers-details" class="wow fadeIn">
+      <div class="container">
+        <div class="section-header">
+          <h2>Open Robotics Olympiad </h2>
+          <!-- <p>Registration Is Now Open !</p> -->
+        </div>
+
+        <div class="row">
+         
+
+
+          <div class="col-md-12">
+            <div class="details">
+              <h2>Are You a Fan Of Robotics?</h2>
+              <p>Open Robotics Olympiad  ( ORO ) is  an international robotics competition that  aims to promote an excellent generation in robotics. It gives the opportunity to national and international pupils and students aged from 6 to 25 years old who will be classified into 4 categories. Each category can participate in specific competitions. ORO’s competitions include SUMO_CHALLENGE , LINE FOLLOWER_CHALLENGE , VEX_CHALLENGES , ALL-TERRAIN and  AI_CHALLENGE.
+              The winner team in each competition is the team who collects the most points in that competition and for which they will awarded. The winner team in the Olympiad is the one who collects the most points from all competitions and to whom the ORO's Big Trophy will go to.</p>
+              <!-- <div class="text-center"><a href="#animatedModal1" class="demo02 about-btn rbt-reg-btn">Sign Up For Open Robotics Olympiad</a></div>
+              <div class="text-center buy-tickets"><a href="https://www.ifest-tunisia.org/download/JuniorChallenge.pdf" class="about-btn download-btn">Download Junior Beginners - Kidzobot Challenge Specifications</a></div>
+              <div class="text-center"><a href="https://www.ifest-tunisia.org/download/AiChallenge.pdf" class="about-btn download-btn">Download A.I Challenge Specifications</a></div>
+              <div class="text-center buy-tickets"><a href="https://www.ifest-tunisia.org/download/LineFollowerChallenge.pdf" class="about-btn download-btn">Download Line Follower Challenge Specifications</a></div>
+              <div class="text-center buy-tickets"><a href="https://www.ifest-tunisia.org/download/SumoChallenge.pdf" class="about-btn download-btn">Download Sumo Challenge Specifications</a></div>
+              <div class="text-center buy-tickets"><a href="https://www.ifest-tunisia.org/download/MazeChallenge.pdf" class="about-btn download-btn">Download Maze Challenge Specifications</a></div>
+              <div class="text-center buy-tickets"><a href="https://www.ifest-tunisia.org/download/TerrainChallenge.pdf" class="about-btn download-btn">Download All Terrain Challenge Specifications</a></div>
+              <div class="text-center buy-tickets"><a href="https://www.ifest-tunisia.org/download/TurningPointVEX.pdf" class="about-btn download-btn">Download VEX Turning Point Challenge Specifications</a></div>
+              <div class="text-center buy-tickets"><a href="https://www.ifest-tunisia.org/download/NextLevelVEX.pdf" class="about-btn download-btn">Download VEX Next Level Challenge Specifications</a></div> -->
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+
+    </section>
+    </section><section id="aboutatast">
+<section id="speakers-details" class="wow fadeIn">
+      <div class="container">
+        <div class="section-header">
+          <h2>About The Organizers</h2>
+          <p>Tunisian Association For The Future Of Sciences and Technology.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <img src="https://www.ifest-tunisia.org/src/img/logo_atast.png" alt="Speaker 1" class="img-fluid">
+            <a href="https://www.ifest-tunisia.org/src/img/atast_team_4.jpg" class="venobox"><img src="https://www.ifest-tunisia.org/src/img/atast_team_4.jpg" alt="Speaker 1" class="img-fluid"></a>
+            <a href="https://www.ifest-tunisia.org/src/img/stc_2019_2.jpg" class="venobox"><img src="https://www.ifest-tunisia.org/src/img/stc_2019_2.jpg" alt="Speaker 1" class="img-fluid"></a>               
+          </div>
+
+
+          <div class="col-md-6">
+            <div class="details">
+              <h2>What Is ATAST?</h2>
+              <div class="social">
+                <a href="https://www.facebook.com/ATASTpage/"><i class="fa fa-facebook"></i></a>
+              </div>
+              <p>Since its first appearance in 2007, ATAST (Tunisian Association for the Future of Sciences and Technology, or l’Association Tunisienne pour l’Avenir des Sciences et Technologie, as it is abbreviated in French) has continually proved itself serious and dedicated in paving the road of scientific and technological development in Tunisia. ATAST started transforming from a small school club into the association it is today, with its establishment as an official scientific association dating to 2011, since then ATAST members have honorably represented Tunisia in many International Festivals and competitions. The Tunisian Representatives are selected by a team of dedicated supervisors. Selection is based on the contestants’ skills and previous results they’ve acquired in the many national events that ATAST organizes over the course of the year.</p>
+ 
+              <p>Some of the national events ATAST organizes are: TUNISIE BRICOLAGE, or TUNIBRICO, is the bricolage contest the association organizes yearly. BE A TEACHER for a while or BAT, The innovative Pedagogy contest for youth the association organizes yearly. SPELLING, the national Spelling Bee the association organizes yearly. SCIENCE THROUGH MY CAM, the innovative scientific filming contest the association organizes yearly. SCIENCE AND TECHNOLOGY CAMP, or STC, a scientific summer camp the association organizes yearly. TUNISIAN SCIENCE AND ENGINEERING FESTIVAL, or TSEF, is the national scientific innovation contest the association organizes. ATAST also has the privilege of being the sole host of the International Festival of Engineering Sciences and Technology in Tunisia, or I-FEST², which appeared in its first edition in August of 2014. ATAST also hosted the international contest in Cybersecurity, Capture The Flag, that occurred in February of 2013 for the first time in the Arab World.</p> 
+
+              <p>ATAST has many goals; the further development of scientific and technological capabilities of youth is one of them. We work to encourage and maintain the innovative spirits in any and all, no matter the age. We also aim to create a well-organized, well-maintained and well-supervised training space in order to facilitate experience and thought exchange. One of our biggest goals however is to unite the scientific groups and organizations under one banner for further improvement of scientific development and thinking.</p>
+            </div>
+          </div>
+          
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="https://www.ifest-tunisia.org/src/img/milset.png" alt="Speaker 1" class="img-fluid" style="height: 250px; width: 250px; margin-left: 110px;">
+          </div>
+          <div class="col-md-6">
+            <div class="details">
+            <h2>CO-ORGANIZER : MILSET Africa</h2>
+            <p>The International Movement for Leisure Activities in Science 
+                and Technology is a non-governmental, non-profit and 
+                politically independent youth organisation, which aims at 
+                developing scientific culture among young people through the 
+                organisation of science and technology programmes, including 
+                science fairs, science camps, congresses and other activities of 
+                high quality. MILSET was created during ESI 87, the first 
+                International Science Fair held in Quebec, Canada in 1987. 
+                Since then, regional offices were established in Latin America, 
+                Africa, Asia, Europe and North America.
+                  </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="details">
+              <h2>CO-ORGANIZER : BRISECC</h2>
+              <p>Belt and Road International Science Education Coordinating 
+                Committee continuously promotes the coordinated 
+                development and common prosperity of the international 
+                science education through extensive cooperation among 
+                government departments, scientific organizations, schools and 
+                enterprises.
+                BRISECC serves as a coordination mechanism and high-level 
+                science education platform to boost resource and information 
+                sharing, personnel exchange, as well as deep cooperation 
+                among members.</p>
+              
+            </div>
+          </div>
+          <div class="col-md-2">
+            <img src="https://www.ifest-tunisia.org/src/img/brisecc.png" alt="Speaker 1" class="img-fluid">
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+    </section><section id="abouttunisia">
+<section id="speakers-details" class="wow fadeIn">
+      <div class="container">
+        <div class="section-header">
+          <h2>About Your Host Country</h2>
+          <p>Tunisia.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <img src="https://www.ifest-tunisia.org/src/img/tunisia/tun_flag.jpg" alt="Speaker 1" class="img-fluid">
+            <a href="https://www.ifest-tunisia.org/src/img/tunisia/tun-1.jpeg" class="venobox"><img src="https://www.ifest-tunisia.org/src/img/tunisia/tun-1.jpeg" alt="Speaker 1" class="img-fluid"></a>
+            <a href="https://www.ifest-tunisia.org/src/img/tunisia/tun-5.jpeg" class="venobox"><img src="https://www.ifest-tunisia.org/src/img/tunisia/tun-5.jpeg" alt="Speaker 1" class="img-fluid"></a>               
+          </div>
+
+
+          <div class="col-md-6">
+            <div class="details">
+              <h2>Get To Know Tunisia</h2>
+              <p>Tunisia's area is almost 165,000 square kilometres (64,000 sq mi), with an estimated population of just under 10.7 million. Its name is derived from the capital Tunis located in the northeast. The south of the country is composed of the Sahara desert, with much of the remainder consisting of particularly fertile soil and 1,300 kilometres (810 mi) of coastline. Tunisia has an association agreement with the European Union and is a member of the Arab Maghreb Union, the Arab League, and the African Union. Tunisia has established close relations with France in particular, through economic cooperation, industrial modernization, and privatisation programs.</p>
+ 
+              <p>The Atlas mountains and the Sahara desert both played a prominent role in ancient times, first with the famous Punic city of Carthage, then as the Roman province of Africa, which was known as the "bread basket" of Rome. Later, Tunisia was occupied by Vandals during the 5th century AD, Byzantines in the 6th century, and Arabs in the 8th century. Under the Ottoman Empire, Tunisia was known as "Regency of Tunis". It passed under French protectorate in 1881. After obtaining independence in 1956 the country took the official name of the "Kingdom of Tunisia" at the end of the reign of Lamine Bey and the Husainid Dynasty. With the proclamation of the Tunisian Republic on July 25, 1957, the nationalist leader Habib Bourguiba became its first president. The country was led by the authoritarian government of President Zine El Abidine Ben Ali from 1987 to 2011 before he fled during the Tunisian revolution also known as the start of "The Arab Spring".</p> 
+
+              <p>Tunisia's climate is temperate in the north, with mild rainy winters and hot, dry summers.The south of the country is desert. The terrain in the north is mountainous, which, moving south, gives way to a hot, dry central plain. The south is semiarid, and merges into the Sahara. A series of salt lakes, known as chotts or shatts, lie in an east-west line at the northern edge of the Sahara, extending from the Gulf of Gabes into Algeria. The lowest point is Shatt al Gharsah, at 17 metres (56 ft) below sea level and the highest is Jebel ech Chambi, at 1,544 metres (5,066 ft).</p>
+              <a href="https://www.ifest-tunisia.org/src/img/tunisia/tun-6.jpeg" class="venobox"><img src="https://www.ifest-tunisia.org/src/img/tunisia/tun-6.jpeg" alt="Speaker 1" class="img-fluid"></a>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+
+    </section>
+    </section><!-- <!--==========================
+      Venue Section
+    ============================-->
+    <!-- <section id="venue" class="wow fadeInUp">
+
+      <div class="container-fluid">
+
+        <div class="section-header">
+          <h2>Event Venue</h2>
+          <p>Event venue location info and gallery</p>
+        </div>
+
+        <div class="row no-gutters">
+          <div class="col-lg-6 venue-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12986.270616677612!2d11.0316419!3d35.5396804!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130223009bc03b6b%3A0x1fe5fe325a938940!2sMahdia%20Palace%20Thalasso!5e0!3m2!1sen!2stn!4v1700036295852!5m2!1sen!2stn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+          </div>
+
+          <div class="col-lg-6 venue-info">
+            <div class="row justify-content-center">
+              <div class="col-11 col-lg-8">
+                <h3><a href="https://www.hotelpalace.com.tn/fr">Mahdia Palace, Mahdia</a></h3>
+                <p>Participants will enjoy one of the most luxurious stays provided in the state of Mahdia, 
+                  fully paid for by the I-FEST² committee. The hotel will cater to all your needs and will try to make your stay as 
+                  comfortable as possible during your participation in I-FEST², with a variety of food options and buffets. Take pleasure 
+                  in doing one of the many fun activities provided in your hotel, visit the gift shop, go for a swim in the pool, or simply 
+                  relax in the lounge. Please schedule with the I-FEST² committee in regards to your plane arrival. All participants will stay 
+                  during the fair in the "Mahdia Palace Thalasso" Hotel</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="container-fluid venue-gallery-container">
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="https://www.ifest-tunisia.org/src/img/hotel/rosa-8.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="https://www.ifest-tunisia.org/src/img/hotel/rosa-8.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="https://www.ifest-tunisia.org/src/img/hotel/rosa-1.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="https://www.ifest-tunisia.org/src/img/hotel/rosa-1.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="https://www.ifest-tunisia.org/src/img/hotel/hotel.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="https://www.ifest-tunisia.org/src/img/hotel/hotel.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="https://www.ifest-tunisia.org/src/img/hotel/rosa-3.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="https://www.ifest-tunisia.org/src/img/hotel/rosa-3.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="https://www.ifest-tunisia.org/src/img/hotel/rosa-7.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="https://www.ifest-tunisia.org/src/img/hotel/rosa-7.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="https://www.ifest-tunisia.org/src/img/hotel/rosa-2.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="https://www.ifest-tunisia.org/src/img/hotel/rosa-2.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="https://www.ifest-tunisia.org/src/img/hotel/rosa-6.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="https://www.ifest-tunisia.org/src/img/hotel/rosa-6.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="https://www.ifest-tunisia.org/src/img/hotel/rosa-4.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="https://www.ifest-tunisia.org/src/img/hotel/rosa-4.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section> --> -->
+<section id="desert">
+<section id="speakers-details" class="wow fadeIn">
+      <div class="container">
+        <div class="section-header">
+          <h2>The Nomad Tours</h2>
+          <p>This Visit to the Tunisian South will in no doubt captivate you and leave you asking for more.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <img src="https://www.ifest-tunisia.org/src/img/desert/des-1.jpg" alt="Speaker 1" class="img-fluid">
+            <a href="https://www.ifest-tunisia.org/src/img/desert/des-2.jpg" class="venobox"><img src="https://www.ifest-tunisia.org/src/img/desert/des-2.jpg" alt="Speaker 1" class="img-fluid"></a>
+            <a href="https://www.ifest-tunisia.org/src/img/desert/des-5.jpg" class="venobox"><img src="https://www.ifest-tunisia.org/src/img/desert/des-5.jpg" alt="Speaker 1" class="img-fluid"></a>               
+          </div>
+
+
+          <div class="col-md-6">
+            <div class="details">
+              <h2>Desert Extra Trip</h2>
+              <p>Discover Cities and Oases like Tozeur, Matmata and Douz. All rich with unique architecture and historic remains. And for all you Star Wars fans out there, a once in a lifetime chance to visit the set of the original film.</p>
+ 
+              <p>This unrivaled experience in Tunisia also ensures your holiday is well planned to make the most of our spectacular country, this tour is mixed with a visit to Sahara and camel rides, you'll also get to see stars crystal clear, this, if you're a fan of astronomy. Not to mention, the desert animals, the idea of putting up a snake around your neck is truly exciting ! Add to that, seeing the Rocky Mountains and waterfalls would be the most fabulous view you'll ever get to see.</p> 
+
+              <h2>Reserve Your Seats !</h2>
+
+              <p>"The Nomad Tours" is an extra trip not included in the base I-FEST² fees, places are limited so be sure to reserve your seats early !</p>
+              <a href="https://www.ifest-tunisia.org/src/img/desert/des-3.jpg" class="venobox"><img src="https://www.ifest-tunisia.org/src/img/desert/des-3.jpg" alt="Speaker 1" class="img-fluid"></a>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+
+    </section>
+    </section><div id="animatedModal"><div class="modal-content"><div class="modal-wrap">
+  <div class="modal-header"><span class="is-active"></div>
+  <div class="modal-bodies">
+    <form method="POST" action="https://www.ifest-tunisia.org">
+
+      <!-- 1. participating as  -->
+     <div class="modal-body modal-body-step-1 is-showing">
+      <div class="title">I-FEST²</div>
+      <div class="description">Hello there, Welcome to I-FEST² Registration <br> Students And Supervisors Must Register Separately</div>
+      <p class="error part_type">Please Select Your Participation Type</p>
+        <select class="user_type" name="part_type">
+          <option value="" disabled selected>Participating As</option>
+          <option value="Student">Student</option>
+          <option value="Supervisor">Supervisor</option>
+          <option value="Guest">Guest</option>
+        </select>
+        <div class="text-center">
+          <div class="nextbutton">Next</div>
+        </div>
+    </div>
+    
+
+    <!-- 2. personal info  -->
+    <div class="modal-body modal-body-step-2">
+      <div class="title">Let's Get Started</div>
+      <div class="description">Tell Us About Yourself</div>
+      <p class="error fname">Please Enter Your First Name</p>
+        <input type="text" placeholder="First Name" name="fname" />
+        <p class="error lname">Please Enter Your Last Name</p>
+        <input type="text" placeholder="Last Name" name="lname" />
+        <p class="error dob">Please Enter Your Date Of Birth</p>
+        <input type="text" class="popupDatepicker" placeholder="Date Of Birth" name="dob">
+        <p class="error email">Please Enter Your Email</p>
+        <input type="email" placeholder="Email" name="email" />
+        <p class="error phone">Please Enter Your Phone Number</p>
+        <input type="tel" name="phone" placeholder="Phone Number">
+        <p class="error sexe">Please Select Your Gender</p>
+        <select name="sexe">
+          <option value="" disabled selected >Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+        <p class="error size">Please Select Your T-Shirt Size</p>
+        <select name="size">
+          <option value="" disabled selected >Shirt Size</option>
+          <option value="xs">XS</option>
+          <option value="s">S</option>
+          <option value="m">M</option>
+          <option value="l">L</option>
+          <option value="xl">XL</option>
+          <option value="xxl">XXL</option>
+      </select>
+        <div class="text-center">
+          <div class="prevbutton">Previous</div>
+          <div class="nextbutton">Next</div>
+        </div>
+    </div>
+
+    <!-- 3. country / school  -->
+    <div class="modal-body modal-body-step-3">
+      <div class="title">Where are you from?</div>
+      <!-- <div class="description">Where Are you from?</div> -->
+        <p class="error country">Please Enter Your Country</p>
+        <input type="text" placeholder="Country" name="country" />
+        <p class="error school">Please Enter Your School Or Organization</p>
+        <input type="text" placeholder="School/Organization" name="school" />
+        <div class="text-center">
+          <div class="prevbutton">Previous</div>
+          <div class="nextbutton">Next</div>
+        </div>
+    </div>
+
+   
+   
+    <!-- affiliation & south trip -->
+
+    <div class="modal-body modal-body-step-4 ">
+      <div class="title">Almost Done, Just A few more things</div>
+      <!-- <div class="description">Almost Done, Just A few more things</div> -->
+        <p class="error award">Please Select Yes or No</p>
+        <select name="award">
+          <option value="" selected disabled >ATAST Special Award Winner</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+        <p class="error affiliate">Please Select Yes or No</p>
+        <select name="affiliate">
+          <option value="" selected disabled >ATAST Affiliate</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+        <p class="error south">Please Select Yes or No</p>
+        <select name="south">
+          <option value="" selected disabled >Going To NOMAD TOURS EXTRA TRIP</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+        
+        
+        <div class="text-center">
+          <div class="prevbutton">Previous</div>
+          <div class="nextbutton">Next</div>
+        </div>
+    </div>
+   
+     <!-- Password  -->
+    <div class="modal-body modal-body-step-5">
+      <div class="title">Finally, please create a password for your account</div>
+      <!-- <div class="description">Where Are you from?</div> -->
+        <p class="error password">Please Create Password</p>
+        <input type="password" placeholder="Password" name="password" id="pwvis" />
+        <input type="checkbox" id="pwcheck" onclick="pwvisibility()">
+        <label for="pwcheck">Show Password</label>
+        <div class="text-center">
+          <div class="prevbutton">Previous</div>
+          <div class="nextbutton">Next</div>
+        </div>
+    </div>
+    
+    <div class="modal-body modal-body-step-6">
+      <div class="title">All Done, Just Press Register !</div>
+      <!-- <div class="description">All Done, Just Press Register !</div> -->
+      <div class="text-center">
+        <div class="prevbutton">Previous</div>
+        <button type="submit" class="submitbutton">Register</button>
+      </div>
+    </div>
+          <input type="hidden" name="_token" value="[redacted-transient-csrf-token]">    </form>
+  </div>
+</div>
+<div class="text-center">
+  <div class="rerun-button">Run again</div>
+</div></div></div>
+
+<div id="animatedModal2"><div class="modal-content"><div class="modal-wrap">
+  <div class="modal-header"><span class="is-active"></div>
+  <div class="modal-bodies">
+        <form method="post" action="https://www.ifest-tunisia.org/affreg" id="aff_form">  
+    <!-- 1. personal info  -->
+
+    <div class="modal-body aff-form is-showing">
+        <div class="title">Affiliation Form</div>
+        <div class="description">Welcome Future I-FEST² Affiliate</div>
+        <p class="error fair_name">Please Enter Your Fair name</p>
+        <input type="text" placeholder="Fair Name" name="fair_name" />
+        <p class="error country">Please Enter Your Country</p>
+        <input type="text" placeholder="Country" name="country" />
+        <p class="error contact_person_name">Please Enter Contact Person Name</p>
+        <input type="text" placeholder="Contact Person Name" name="contact_person_name">
+        <p class="error contact_person_post">Please Enter Contact Person Position (Principal, Teacher, etc..)</p>
+        <input type="text" placeholder="Contact Person Position" name="contact_person_post">
+        <p class="error contact_email">Please Enter Contact Person Name Email</p>
+        <input type="email" placeholder="Contact Person Email" name="contact_email" />
+        <p class="error phone">Please Enter Contact Person Phone Number</p>
+        <input type="tel" name="phone" placeholder="Contact Person Phone Number">
+        <p class="error affiliation">Please Select Affiliation or Reaffiliation</p>
+        <select name="affiliation">
+          <option value="" disabled selected>Affiliation/Reaffiliation</option>
+          <option value="affiliation">Affiliation</option>
+          <option value="reaffiliation">Reaffiliation</option>
+        </select>
+        <div class="description">Please Download the full form and then e-mail it to info.atast@gmail.com</div>
+        <div class="text-center buy-tickets"><a href="https://www.ifest-tunisia.org/download/affiliation_i-fest.doc" class="about-btn download-btn">Download Affiliation Form</a></div>
+        <div class="text-center">
+          <button type="button" class="subBtn submitbutton">Register</button>
+        </div>
+    </div>
+
+ 
+          <input type="hidden" name="_token" value="[redacted-transient-csrf-token]">
+    </form>
+   </div>
+</div>
+<div class="text-center">
+  <div class="rerun-button">Run again</div>
+</div>
+</div></div></div>
+
+<script>
+  var msg = '';
+  var exist = '';
+  if(exist){
+    alert(msg);
+  }
+</script>
+		
+	</main>
+	<!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <a href="#intro"><img src="https://www.ifest-tunisia.org/src/img/IFEST.png" alt="IFESTlogo" style="width: 100px; height: 120px;"></a>
+          </div>
+
+      <!--     <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">About us</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+ -->
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="#intro">Home</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#aboutatast">About us</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#gallery">Gallery</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              ATAST BP42 Moknine   <br>
+              5050, Monastir<br>
+              TUNISIA <br>
+              <strong>Phone:</strong> +216 29 535 631<br>
+              <strong>Email:</strong> info.atast@gmail.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="https://www.facebook.com/IFEST.TUNISIA/" class="facebook"><i class="fa fa-facebook"></i></a>
+              <!-- <a href="#" class="instagram"><i class="fa fa-instagram"></i></a> -->
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>ATAST I-FEST²</strong>. All Rights Reserved
+      </div>
+ 
+    </div>
+  </footer><!-- #footer -->	<!-- JavaScript Libraries -->
+  <script src="https://www.ifest-tunisia.org/src/css/lib/jquery/jquery.min.js"></script>
+  <script src="https://www.ifest-tunisia.org/src/css/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="https://www.ifest-tunisia.org/src/css/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://www.ifest-tunisia.org/src/css/lib/easing/easing.min.js"></script>
+  <script src="https://www.ifest-tunisia.org/src/css/lib/superfish/hoverIntent.js"></script>
+  <script src="https://www.ifest-tunisia.org/src/css/lib/superfish/superfish.min.js"></script>
+  <script src="https://www.ifest-tunisia.org/src/css/lib/wow/wow.min.js"></script>
+  <script src="https://www.ifest-tunisia.org/src/css/lib/venobox/venobox.min.js"></script>
+  <script src="https://www.ifest-tunisia.org/src/js/animatedModal.js"></script>
+  <script src="https://www.ifest-tunisia.org/src/css/lib/owlcarousel/owl.carousel.min.js"></script>
+
+	
+  <!-- Contact Form JavaScript File -->
+  <!-- <script src="contactform/contactform.js"></script> -->
+
+  <!-- Template Main Javascript File -->
+  <script src="https://www.ifest-tunisia.org/src/js/jquery.plugin.min.js"></script>
+  <script src="https://www.ifest-tunisia.org/src/js/jquery.datepick.js"></script>
+  <script src="https://www.ifest-tunisia.org/src/js/main.js"></script>
+
+  
+  <script src="https://www.ifest-tunisia.org/src/js/timer.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+  <script>
+	function blink_text() {
+    $('.blink').fadeOut(500);
+    $('.blink').fadeIn(500);
+}
+setInterval(blink_text, 1000);
+
+  </script>
+  
+</body>
+</html>

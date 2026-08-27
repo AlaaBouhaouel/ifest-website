@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <title>
+    Login Page
+  </title>
+  <!-- favicons -->
+  <!-- Favicons -->
+
+  <link href="https://www.ifest-tunisia.org/src/img/IFEST.png" rel="icon">
+  <link href="https://www.ifest-tunisia.org/src/img/IFEST.png" rel="apple-touch-icon">
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="https://www.ifest-tunisia.org/src/css/userprofile/nucleo-icons.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="https://www.ifest-tunisia.org/src/css/userprofile/black-dashboard.css?v=1.0.0" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project
+  <link href="../assets/demo/demo.css" rel="stylesheet" /> -->
+  <meta name="csrf-token" content="[redacted-transient-csrf-token]" />
+</head>
+<script type="text/javascript" src="https://www.ifest-tunisia.org/src/js/jquery-3.5.1.js"></script>
+
+
+
+  
+   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.2/css/dataTables.bootstrap5.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.0.0/css/buttons.bootstrap5.css"/>
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.11.2/js/dataTables.bootstrap5.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.0/js/dataTables.buttons.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.0/js/buttons.bootstrap5.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.0/js/buttons.colVis.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.0/js/buttons.html5.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+
+<!-- here-->
+<style type="text/css">
+	.mid-container{
+		width :100vw;
+		height:100vh;
+
+	}
+</style>
+<body class="container mid-container" >
+
+
+			<div class="row">
+				<div class="col-md-12 ">
+					<div class="card">
+						<div class="card-header">
+							<div class="d-lg-flex flex-row justify-content-between">
+								<div class="p-2"><h5 class="title">I-FEST² Login - <a href=https://www.ifest-tunisia.org>Home</a> </h5></div>
+								<div class="p-2"><a href="https://www.ifest-tunisia.org"><img style="height: 5rem; width: 5rem;" src="https://www.ifest-tunisia.org/src/img/IFEST.png"></a></div>
+							</div>
+							
+								
+						</div>
+						<div class="card-body">
+							<form method="post" action="https://www.ifest-tunisia.org/user/login">
+															<div class="row">
+								
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Email</label>
+										<input type="text" name="email" class="form-control">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Password</label>
+										<input type="password" name="password" class="form-control">
+									</div>
+								</div>
+									<div class="card-footer">
+	                					<button type="submit" class="btn btn-fill btn-primary">Login</button>
+	              					</div>
+							</div>
+								<input type="hidden" name="_token" value="[redacted-transient-csrf-token]">
+								</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		
+	
+		
+	
+</body>
+
+
+
+
+  <!--   Core JS Files   -->
+  
+  <script src="https://www.ifest-tunisia.org/src/js/userprofile/core/popper.min.js"></script>
+  <script src="https://www.ifest-tunisia.org/src/js/userprofile/core/bootstrap.min.js"></script>
+  <script src="https://www.ifest-tunisia.org/src/js/userprofile/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="https://www.ifest-tunisia.org/src/js/userprofile/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="https://www.ifest-tunisia.org/src/js/userprofile/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="https://www.ifest-tunisia.org/src/js/userprofile/black-dashboard.min.js?v=1.0.0"></script><!-- Black Dashboard DEMO methods, don't include it in your project!
+  <script src="../assets/demo/demo.js"></script> -->
+
+ 
+
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('.sidebar');
+        $navbar = $('.navbar');
+        $main_panel = $('.main-panel');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+        sidebar_mini_active = true;
+        white_color = false;
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+
+
+        $('.fixed-plugin a').click(function(event) {
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
+            }
+          }
+        });
+
+        $('.fixed-plugin .background-color span').click(function() {
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data', new_color);
+          }
+
+          if ($main_panel.length != 0) {
+            $main_panel.attr('data', new_color);
+          }
+
+          if ($full_page.length != 0) {
+            $full_page.attr('filter-color', new_color);
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr('data', new_color);
+          }
+        });
+
+        $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
+          var $btn = $(this);
+
+          if (sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            sidebar_mini_active = false;
+            blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
+          } else {
+            $('body').addClass('sidebar-mini');
+            sidebar_mini_active = true;
+            blackDashboard.showSidebarMessage('Sidebar mini activated...');
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+        });
+
+        $('.switch-change-color input').on("switchChange.bootstrapSwitch", function() {
+          var $btn = $(this);
+
+          if (white_color == true) {
+
+            $('body').addClass('change-background');
+            setTimeout(function() {
+              $('body').removeClass('change-background');
+              $('body').removeClass('white-content');
+            }, 900);
+            white_color = false;
+          } else {
+
+            $('body').addClass('change-background');
+            setTimeout(function() {
+              $('body').removeClass('change-background');
+              $('body').addClass('white-content');
+            }, 900);
+
+            white_color = true;
+          }
+
+
+        });
+
+        $('.light-badge').click(function() {
+          $('body').addClass('white-content');
+        });
+
+        $('.dark-badge').click(function() {
+          $('body').removeClass('white-content');
+        });
+      });
+    });
+  </script>
+  
+
+  <script type="text/javascript">
+
+    // modal edit script
+    var body;
+    var editBody;
+    var proj_id;
+    var title;
+  
+    $('.editmodal').click(function(){
+      proj_id = $('#proj_id').html();
+      console.log(typeof proj_id);
+      console.log('proj id:',proj_id);
+
+      body = $(this).parent().prev().find("p");
+      title = $(this).attr("id");
+      console.log('title:',title);
+     
+    $('.modal').find('.editBody').val(body.html());
+    });
+
+    $('#saveModal').click(function(e){
+      editBody = $('.modal').find('.editBody').val();
+      console.log(editBody);
+      body.text(editBody);
+
+      e.preventDefault();
+      $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+      $.ajax({
+           type:'POST',
+           
+           url:"https://www.ifest-tunisia.org/user/updateproject",
+           data:{
+            content: editBody,
+            title: title,
+            _token : token
+          },   
+        });
+    });
+
+
+    $('.editcomment').click(function(){
+      proj_id = $('#proj_id').text();
+      console.log('proj id:',proj_id);
+      title = $(this).attr("id");
+      console.log('title:',title);
+      $.ajax({
+        type:'GET',
+        data:{
+          proj_id:proj_id,
+          title:title
+        },
+        url:"https://www.ifest-tunisia.org/user/getcommentproject",
+        success: function (data) {
+        console.log(data);
+        console.log('content is',data.comment);
+        $('.modal').find('.comment').val(data.comment);
+        
+        },
+      });
+    });
+
+    $('#saveComment').click(function(e){
+      editBody = $('.modal').find('.comment').val();
+      console.log('content:',editBody);
+      e.preventDefault();
+      $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+      $.ajax({
+           type:'POST',
+           
+           url:"https://www.ifest-tunisia.org/user/commentproject",
+           data:{
+            content: editBody,
+            title: title,
+            proj_id: proj_id,
+            _token : token
+          },   
+        });
+    });
+
+    // $('#uploadFiles').click(function(e){
+    //   e.preventDefault();
+    //   var formData = new FormData(document.getElementById('files'));
+    //   console.log(formData);
+
+    //   $.ajaxSetup({
+    //     headers: {
+    //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    //     }
+    // });
+    //   $.ajax({
+    //        type:'POST',
+           
+           // url:"",
+    //        data:{
+    //         formData,
+    //         _token : token
+    //       },
+    //       cache:false,
+    //       contentType: false,
+    //       processData: false,
+    //       success: (data) => {
+    //       alert('File has been uploaded successfully');
+    //       console.log(data);
+    //       },
+    //       error: function(data){
+    //       console.log(data);
+    //       }
+    //     });
+    // });
+
+
+ 
+   
+
+
+  </script>
+   <script type="text/javascript">
+$(document).ready(function() {
+    $('#example').DataTable( {
+        dom: 'Blfrtip',
+        buttons: [
+            'copyHtml5',
+            'excelHtml5',
+            'csvHtml5',
+            'pdfHtml5'
+        ],
+        lengthMenu: [ [10, 25, 50, 100, 250, -1], [10, 25, 50, 100, 250, "All"] ]
+    } );
+    $('#stalls').DataTable();
+} );
+</script>
+<script type="text/javascript">
+  var token = '[redacted-transient-csrf-token]' ;
+  var exist = '';
+  if (exist){
+    alert('');
+  }
+</script>
+</body>
+
+</html>

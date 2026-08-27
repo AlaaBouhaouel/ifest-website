@@ -1,0 +1,348 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I-FEST² Tunisia</title>
+    <link rel="icon" type="image/png" href="{% static 'index/ifest.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'index/ifest.png' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="contact">
+            <p>Contact Us</p>
+            <div class="social-icons">
+                <a href="#"><img src="{% static 'icons/email.png' %}" alt="Email"></a>
+                <a href="#"><img src="{% static 'icons/facebook.png' %}" alt="Facebook"></a>
+                <a href="#"><img src="{% static 'icons/instagram.png' %}" alt="Instagram"></a>
+                <a href="#"><img src="{% static 'icons/linkdin.png' %}" alt="LinkedIn"></a>
+                <a href="#"><img src="{% static 'icons/whatsapp.png' %}" alt="WhatsApp"></a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Get Involved</a></li>
+                    <li><a href="#">STEM congress</a></li>
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">Alumni</a></li>
+  
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-content">
+            <div class="logo"><a href="#home" aria-label="I-FEST² home"><img src="{% static 'index/ifest.png' %}" alt="IFEST Tunisia Logo"></a></div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#finalists">2026 Finalists</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#partners">Partners</a></li>
+                </ul>
+            </div>
+            <div class="registration-btn">
+                <a href="#">Register Now</a>
+            </div>
+        </div>
+
+    </header>
+    <section class="hero-section-coming-soon" id="home">
+        <div class="hero-content">
+            <div class="vdo-wrapper">
+                <video autoplay muted loop>
+                    <source src="{% static 'vdo/ifest11.mp4' %}" type="video/mp4">
+                </video>
+            </div>
+            <div class="hero-content-center">
+                <div class="hero-content-text">
+                    <h1 class="mb-1"><span>One Of The Biggest</span><br>International Science Fair <br>In Africa</h1>
+                    <h1>I-FEST²</h1>
+                    <h3>the International Festival of Engineering Science and Technology in Tunisia</h3>
+                    <p>Join us for an unforgettable experience of innovation, creativity, and collaboration.</p>
+                </div>
+                <div class="registration-banner">
+                    <a href="#" class="hero-btn-h1 registration-btn ">Register Now</a>
+                    <a href="#" class="hero-btn-h2 registration-btn">Become an Affiliate</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="about-inner">
+            <div class="about-copy">
+                <p class="about-kicker">About I-FEST²</p>
+                <h2>Science, discovery, and friendship—hosted in Tunisia.</h2>
+                <p class="about-lead">I-FEST² is the International Festival of Engineering Science and Technology in Tunisia, organized by the Tunisian Association for the Future of Sciences and Technology (ATAST).</p>
+                <p>The festival brings young innovators together to present their work, exchange ideas, meet new cultures, and learn from one another. Beyond the competition, participants experience Tunisia through shared activities, visits, and excursions.</p>
+
+                <div class="about-values" aria-label="I-FEST² values">
+                    <span>Innovation</span>
+                    <span>Culture</span>
+                    <span>Connection</span>
+                </div>
+
+                <a class="about-link" href="#categories">Discover the festival <span aria-hidden="true">→</span></a>
+            </div>
+
+            <div class="about-gallery" aria-label="Scenes from Tunisia">
+                <figure class="about-image-main">
+                    <img src="{% static 'index/tun-1.jpeg' %}" alt="A coastal view of Tunisia" loading="lazy">
+                </figure>
+                <figure>
+                    <img src="{% static 'index/tun-2.jpeg' %}" alt="Historic architecture in Tunisia" loading="lazy">
+                </figure>
+                <figure>
+                    <img src="{% static 'index/tun-3.jpeg' %}" alt="A scenic Tunisian destination" loading="lazy">
+                </figure>
+                <div class="about-flag">
+                    <img src="{% static 'index/tunisian-flag.jpg' %}" alt="Flag of Tunisia" loading="lazy">
+                    <p><small>Host country</small>Tunisia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="finalists-section" id="finalists">
+        <div class="finalists-inner">
+            <div class="finalists-copy">
+                <div class="finalists-heading">
+                    <p class="section-eyebrow">Celebrating young innovators</p>
+                    <h2>Congratulations to all the I-FEST² 2026 finalists</h2>
+                </div>
+
+                <div class="finalists-content">
+                    <p class="finalists-lead">Congratulations to the outstanding students whose ideas, research, and determination earned them a place among this year&rsquo;s I-FEST² finalists.</p>
+                    <p>These young innovators are tackling real challenges across science, engineering, technology, mathematics, environmental studies, life sciences, multimedia, and the social sciences. Their work reflects the curiosity and collaborative spirit at the heart of I-FEST².</p>
+                    <p>Meet the projects selected for the final stage and discover the ideas shaping a brighter future.</p>
+
+                    <!-- Replace the # above with the official Top 10 Stage Finalists URL. -->
+                </div>
+            </div>
+
+            <div class="finalists-media">
+                <p><span>Watch</span> the I-FEST² experience</p>
+
+                <video autoplay muted loop playsinline>
+                    <source src="{% static 'vdo/ifest2.mp4' %}" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-preview" id="gallery">
+        <div class="gallery-header">
+            <div>
+                <p class="gallery-kicker">Life at I-FEST²</p>
+                <h2>Moments that bring us together</h2>
+            </div>
+            <div class="gallery-intro">
+                <p>A glimpse of the people, cultures, and shared experiences that make every edition memorable.</p>
+                <a href="#">Explore the full gallery <span aria-hidden="true">→</span></a>
+            </div>
+        </div>
+
+        <div class="gallery-grid">
+            <figure>
+                <img src="{% static 'ifest/2.jpg' %}" alt="International I-FEST² participants gathering with their national flags" loading="lazy">
+            </figure>
+            <figure>
+                <img src="{% static 'ifest/3.jpg' %}" alt="Young participants representing Georgia at I-FEST²" loading="lazy">
+            </figure>
+            <figure>
+                <img src="{% static 'ifest/4.jpg' %}" alt="Guests attending an I-FEST² ceremony" loading="lazy">
+            </figure>
+            <figure>
+                <img src="{% static 'ifest/5.jpg' %}" alt="I-FEST² participants presenting flags on stage" loading="lazy">
+            </figure>
+            <figure>
+                <img src="{% static 'ifest/6.jpg' %}" alt="International delegations gathered at I-FEST²" loading="lazy">
+            </figure>
+            <figure>
+                <img src="{% static 'ifest/8.jpg' %}" alt="I-FEST² students sharing a moment during the event" loading="lazy">
+            </figure>
+        </div>
+    </section>
+
+    <section class="categories-section" id="categories">
+        <div class="categories-header">
+            <div>
+                <p class="categories-kicker">Eight fields of discovery</p>
+                <h2>Explore our project categories</h2>
+            </div>
+            <p>Find the field that best fits your research, invention, or creative work—and bring your idea to I-FEST².</p>
+        </div>
+
+        <div class="categories-grid">
+            <article class="category-card">
+                <div class="category-image">
+                    <img src="{% static 'index/physics.jpg' %}" alt="Physical science research" loading="lazy">
+                    <span>01</span>
+                </div>
+                <div class="category-copy">
+                    <h3>Physical Science</h3>
+                    <p>Explore matter, energy, motion, and the laws that shape our universe through observation and experiment.</p>
+                </div>
+            </article>
+
+            <article class="category-card">
+                <div class="category-image">
+                    <img src="{% static 'index/Enviro.jpg' %}" alt="Environmental science research" loading="lazy">
+                    <span>02</span>
+                </div>
+                <div class="category-copy">
+                    <h3>Environmental Science</h3>
+                    <p>Investigate natural systems and develop practical responses to environmental challenges.</p>
+                </div>
+            </article>
+
+            <article class="category-card">
+                <div class="category-image">
+                    <img src="{% static 'index/social.jpg' %}" alt="Social science research" loading="lazy">
+                    <span>03</span>
+                </div>
+                <div class="category-copy">
+                    <h3>Social Science</h3>
+                    <p>Study people, communities, identity, and the forces that shape how societies grow and change.</p>
+                </div>
+            </article>
+
+            <article class="category-card">
+                <div class="category-image">
+                    <img src="{% static 'index/cs.jpg' %}" alt="Computer science and programming" loading="lazy">
+                    <span>04</span>
+                </div>
+                <div class="category-copy">
+                    <h3>Computer Science</h3>
+                    <p>Create algorithms, software, and digital systems that turn complex problems into useful solutions.</p>
+                </div>
+            </article>
+
+            <article class="category-card">
+                <div class="category-image">
+                    <img src="{% static 'index/engineering.jpg' %}" alt="Engineering design and prototyping" loading="lazy">
+                    <span>05</span>
+                </div>
+                <div class="category-copy">
+                    <h3>Engineering</h3>
+                    <p>Design, build, test, and improve technologies made to solve real needs in the world around us.</p>
+                </div>
+            </article>
+
+            <article class="category-card">
+                <div class="category-image">
+                    <img src="{% static 'index/lifebio.jpg' %}" alt="Life and biology research" loading="lazy">
+                    <span>06</span>
+                </div>
+                <div class="category-copy">
+                    <h3>Life &amp; Biology</h3>
+                    <p>Examine living systems, health, behavior, biodiversity, and life&rsquo;s relationship with its environment.</p>
+                </div>
+            </article>
+
+            <article class="category-card">
+                <div class="category-image">
+                    <img src="{% static 'index/multimedia.jpg' %}" alt="Multimedia production and storytelling" loading="lazy">
+                    <span>07</span>
+                </div>
+                <div class="category-copy">
+                    <h3>Multimedia</h3>
+                    <p>Combine image, sound, animation, video, and interaction to communicate ideas in powerful new ways.</p>
+                </div>
+            </article>
+
+            <article class="category-card">
+                <div class="category-image">
+                    <img src="{% static 'index/math.jpg' %}" alt="Mathematical research and modeling" loading="lazy">
+                    <span>08</span>
+                </div>
+                <div class="category-copy">
+                    <h3>Mathematics</h3>
+                    <p>Use patterns, models, logic, and proof to describe questions clearly and reveal new possibilities.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="horizontal-banner-content" id="partners">
+        <div class="horizontal-nav">
+            <ul>
+                <li><a href="#"><img src="{% static 'index/atast.png' %}" alt="ATAST"></a></li>
+                <li><a href="#"><img src="{% static 'index/milset.png' %}" alt="Milset"></a></li>
+                <li><a href="#"><img src="{% static 'index/brisecc.png' %}" alt="brisecc"></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="#" class="footer-logo" aria-label="I-FEST² homepage">
+                    <img src="{% static 'index/ifest.png' %}" alt="I-FEST² Tunisia">
+                </a>
+                <p class="footer-tagline">Where young minds turn bold ideas into real-world impact.</p>
+                <address>
+                    ATAST BP42 Moknine<br>
+                    5050 Monastir, Tunisia
+                </address>
+                <a class="footer-contact-link" href="tel:+21629535631">+216 29 535 631</a>
+                <a class="footer-contact-link" href="mailto:info.atast@gmail.com">info.atast@gmail.com</a>
+            </div>
+
+            <nav class="footer-column" aria-label="Site links">
+                <h2>Site</h2>
+                <ul>
+                    <li><a href="#">Homepage</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <nav class="footer-column" aria-label="Program links">
+                <h2>Programs</h2>
+                <ul>
+                    <li><a href="#">I-FEST²</a></li>
+                    <li><a href="#">STEAM Congress</a></li>
+                    <li><a href="#">Open Robotics Olympiad</a></li>
+                    <li><a href="#">Nomad Tours</a></li>
+                </ul>
+            </nav>
+
+            <nav class="footer-column" aria-label="Participation links">
+                <h2>Participate</h2>
+                <ul>
+                    <li><a href="#">Registration</a></li>
+                    <li><a href="#">Become an Affiliate</a></li>
+                    <li><a href="#">Participant Login</a></li>
+                    <li><a href="#">Qualification</a></li>
+                </ul>
+            </nav>
+
+            <nav class="footer-column" aria-label="Resource links">
+                <h2>Resources</h2>
+                <ul>
+                    <li><a href="#categories">Project Categories</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Rules &amp; Downloads</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 ATAST I-FEST². All rights reserved.</p>
+            <div class="footer-socials" aria-label="Social media">
+                <a href="mailto:info.atast@gmail.com" aria-label="Email I-FEST²"><img src="{% static 'icons/email.png' %}" alt=""></a>
+                <a href="https://www.facebook.com/IFEST.TUNISIA/" target="_blank" rel="noopener" aria-label="I-FEST² on Facebook"><img src="{% static 'icons/facebook.png' %}" alt=""></a>
+                <a href="#" aria-label="I-FEST² on Instagram"><img src="{% static 'icons/instagram.png' %}" alt=""></a>
+                <a href="https://wa.me/21629535631" target="_blank" rel="noopener" aria-label="Contact I-FEST² on WhatsApp"><img src="{% static 'icons/whatsapp.png' %}" alt=""></a>
+            </div>
+            <a class="back-to-top" href="#">Back to top <span aria-hidden="true">↑</span></a>
+        </div>
+    </footer>
+</body>
+</html>

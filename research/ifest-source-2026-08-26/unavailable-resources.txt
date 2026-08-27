@@ -1,0 +1,12 @@
+https://www.ifest-tunisia.org/sitemap.xml
+https://www.ifest-tunisia.org/src/js/timer.js
+https://www.ifest-tunisia.org/src/img/preloader.svg
+https://www.ifest-tunisia.org/contactform/contactform.js
+https://www.ifest-tunisia.org/assets/img/apple-icon.png
+https://www.ifest-tunisia.org/assets/img/favicon.png
+https://www.ifest-tunisia.org/assets/demo/demo.css
+https://www.ifest-tunisia.org/assets/demo/demo.js
+https://www.ifest-tunisia.org/src/css/img/bg.gif
+https://www.ifest-tunisia.org/src/css/img/asc.gif
+https://www.ifest-tunisia.org/src/css/img/desc.gif
+https://www.ifest-tunisia.org/src/fonts/nucleo.svg
