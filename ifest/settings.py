@@ -19,7 +19,7 @@ def env_bool(name, default=False):
     return os.getenv(name, str(default)).strip().lower() in {'1', 'true', 'yes', 'on'}
 
 
-DEBUG = env_bool('DEBUG')
+DEBUG = env_bool('DEBUG', default=False)
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 if not SECRET_KEY:
@@ -189,7 +189,7 @@ STORAGES = {
         'BACKEND': 'cloudinary_storage.storage.MediaCloudinaryStorage' if HAS_CLOUDINARY else 'django.core.files.storage.FileSystemStorage',
     },
     'staticfiles': {
-        'BACKEND': 'whitenoise.storage.CompressedStaticFilesStorage' if HAS_WHITENOISE else 'django.contrib.staticfiles.storage.StaticFilesStorage',
+        'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage' if HAS_WHITENOISE else 'django.contrib.staticfiles.storage.StaticFilesStorage',
     },
 }
 
@@ -258,3 +258,4 @@ LOGGING = {
         },
     },
 }
+
