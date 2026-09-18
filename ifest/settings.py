@@ -22,9 +22,10 @@ def env_bool(name, default=False):
 DEBUG = env_bool('DEBUG', default=False)
 
 SECRET_KEY = os.getenv('SECRET_KEY')
+IS_COLLECTSTATIC = len(os.sys.argv) > 1 and os.sys.argv[1] == 'collectstatic'
 if not SECRET_KEY:
-    if DEBUG:
-        SECRET_KEY = 'django-insecure-local-development-only'
+    if DEBUG or IS_COLLECTSTATIC:
+        SECRET_KEY = 'django-insecure-build-only-placeholder'
     else:
         raise ImproperlyConfigured('Set the SECRET_KEY environment variable in Railway.')
 
@@ -258,4 +259,5 @@ LOGGING = {
         },
     },
 }
+
 
